@@ -1,0 +1,11 @@
+
+h1 Similar Music
+
+form(action="", method="post", id="lookup_similar_songs_form")
+	input(type="text", name="track", value="Track", id="track", class="field")
+	by
+	input(type="text", name="track", value="Artist", id="artist", class="field")
+	input(type="submit", value="+", id="add")
+	
+	p#autocompleted_name
+	p#autocompleted_artist
