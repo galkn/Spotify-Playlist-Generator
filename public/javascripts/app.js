@@ -110,7 +110,7 @@ $(function() {
 							
 							var song_counter = 0;
 							var song_ids = [];
-							for(var j=0; j<6; j++) {
+							for(var j=0; j<50; j++) {
 								song_counter++;
 								
 								log(window.similarSongsInOrderedList[j]);
@@ -129,7 +129,7 @@ $(function() {
 									log(song_ids);
 									
 									if(song_counter == 0) {
-										$("body").append('<iframe src="https://embed.spotify.com/?uri=spotify:trackset:Hi:' + song_ids.join(",") + '" frameborder="0" allowtransparency="true" width="720" height="640"></iframe>');
+										$("body").append('<iframe src="https://embed.spotify.com/?uri=spotify:trackset::' + song_ids.join(",") + '" frameborder="0" allowtransparency="true" width="720" height="640"></iframe>');
 										log(new Date());	
 									}
 								});
@@ -152,10 +152,14 @@ $(function() {
 		}
 		
 	});
-	window.songList = new SongList([
-		
-		new Song({artist: "britney spears", track: "sometimes"}),
-		
+	window.songList = new SongList([		
+		new Song({artist: "david guetta", track: "little bad girl"}),		
+		new Song({artist: "nicki minaj", track: "starships"}),		
+		new Song({artist: "skrillex", track: "bangarang"}),		
+		new Song({artist: "dev", track: "in the dark"}),		
+		new Song({artist: "la roux", track: "bulletproof"}),		
+		new Song({artist: "oh land", track: "sun of a gun"}),		
+		new Song({artist: "cobra starship", track: "you make me feel"}),		
 		]);
 		window.songList.generateRecomendedSongsList();
 	
